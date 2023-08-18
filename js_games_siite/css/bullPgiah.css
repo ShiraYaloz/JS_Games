@@ -1,0 +1,187 @@
+/* תמונה לרקע */
+body{
+   font-family: Heebo; 
+   background-image:url('../pic/ju.jpg');
+   background-size: 100%;
+   background-attachment:local; 
+   background-repeat:no-repeat;
+   background-color: #8ab6d9;
+
+}
+/* גריד לסדר במשחק */
+.grid{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav article"
+       "footer footer"
+       ;
+    grid-template-rows: 15% 1fr 10% ;
+    grid-template-columns:25% 1fr;
+    height: 100%;
+}
+
+header{
+    grid-area:header ;
+    /* background-color: blue;  */
+    direction: rtl;
+}
+nav{
+    grid-area:nav ;
+    /* background-color: navajowhite; */
+}
+article{
+    grid-area:article ; 
+    margin: auto;
+    /* background-color:gold; */
+}
+footer{
+    grid-area: footer;
+    /* background-color: rgb(255, 0, 106); */
+}
+
+/*  כפתורי הצבעים לבחירה*/
+.color{
+   margin-left: 4px;
+   width: 100px;
+   height: 100px;
+   border: none;
+   border-radius: 100px;
+}
+.color:hover{
+    opacity: 0.8;
+}
+.img{
+    margin-right: 35%;
+}
+/* הטקסט */
+.lab{
+    font-size: 50px;
+    width: max-content;
+    font-weight: 100;
+    color: rgb(49, 49, 49);
+}
+/*צבעי הניחושים*/
+.guesHide{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    margin-left: 4px;
+    border-radius: 100px;
+}
+/* כמה בול וכמה פגיעה */
+.points{
+    text-align: center;
+    padding: 12px 15px;
+    background-color: rgb(66, 139, 193);
+    border: 0px solid;
+    border-radius: 0px;
+    font-family: Heebo;
+    font-size: 20px;
+    margin-left: 4px;
+    font-weight: 100;
+}
+/* אודות */
+.data{
+    margin-right:7% ;
+    position: relative;
+    display: inline-block;
+}
+.data_i{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    direction: ltr;
+}
+.data:hover .data_i {
+    display: block;
+  }
+  /* היסטוריה */
+.h{
+    width: 40px;
+    height: 40px; 
+    margin-left: 3px;
+    background-color: transparent;
+    border:none;
+    font-size: 40px;
+    font-family: Heebo;
+    font-weight: 100;
+    border-radius: 40px;
+  
+}
+/*  כפתורים להתחלה וכו*/
+.btn{
+    text-align: center;
+    padding: 12px 76px;
+    background-color: rgb(66, 139, 193);
+    border: 0px solid;
+    border-radius: 0px;
+}
+/* כותרת בתוך המסגרת */
+legend{
+    font-size: 40px;
+    font-weight: 100;
+}
+/* המילה תשובה */
+#ans{
+    display: none;
+}
+/* רספונסיבי*/
+@media(max-width:768px){
+    .grid{
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "article article"
+            "nav footer"
+           ;
+        grid-template-rows: 15%  40% 1fr  ;
+        grid-template-columns: 60% 1fr;
+        height: 100%;
+    } 
+    .color{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    } 
+    .guesHide{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+    .points{
+       width: 100px;
+    }
+    .h{
+    width: 20px;
+    height: 20px; 
+    border-radius: 20px;
+    font-size: 20px;
+    }
+    .lab{
+        font-size: 20px;  
+    }
+    legend{
+        font-size: 20px;
+    }
+    .btn{
+        width: 190px;
+        height: 50px; 
+        padding: 10px 60px;
+        margin-top: 50px;
+    }
+    #data{
+        margin-top: 0px;
+    }
+    #h1{
+        font-size: 40px; 
+    }
+    .img{
+        width: 10%;
+    }
+}

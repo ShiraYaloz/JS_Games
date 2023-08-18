@@ -1,0 +1,10 @@
+body{   
+    color: white;
+    /*background-image:url('../pic/1.jpg');*/
+    background-size: 100%;
+    background-attachment:fixed; 
+    background-repeat:no-repeat;
+   }
+   .soon{
+       display:none;
+   }
